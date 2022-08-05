@@ -1,0 +1,8 @@
+GET http://localhost:8088/api/person/catherine
+
+POST http://localhost:8088/api/person
+content-type: application/json
+
+{
+  "name": "Insert Name"
+}

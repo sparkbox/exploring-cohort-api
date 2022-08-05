@@ -1,0 +1,29 @@
+{
+  "name": "exploring-api",
+  "version": "0.0.0",
+  "description": "Sample API app",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node .",
+    "start:watch": "nodemon dist/index.js",
+    "lint": "eslint src/**/*.js",
+    "test": "jest",
+    "test:watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/sparkbox/exploring-api"
+  },
+  "author": "Sparkbox Exploring Cohort",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15"
+  }
+}

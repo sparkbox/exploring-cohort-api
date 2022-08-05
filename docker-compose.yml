@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: exploring-API
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./src:/usr/app/src
+      - ./package.json:/usr/app/package.json
+      - ./dev-team.db:/usr/app/dev-team.db
+    entrypoint: [ "npm", "run", "start:watch" ]
+
+  dev:
+    container_name: exploring-API-dev
+    image: node:17
+    volumes:
+      - .:/usr/app
+    working_dir: /usr/app
+    stdin_open: true
+    tty: true
